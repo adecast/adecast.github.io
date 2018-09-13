@@ -6756,113 +6756,68 @@ button.close {
     display: none !important;
   }
 }
-footer {
-	width:100%;
-	float:left;
-	clear:both;
-	box-shadow:0px 2px 2px #000;
-		-moz-box-shadow:0px 2px 2px #000;
-		-webkit-box-shadow:0px 2px 2px #000;
-	border-radius:5px;
-		-moz-border-radius:5px;
-		-webkit-border-radius:5px;
-	background: #2f2f2f; /* Old browsers */
-background: -moz-linear-gradient(top,  #2f2f2f 0%, #242424 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2f2f2f), color-stop(100%,#242424)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #2f2f2f 0%,#242424 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #2f2f2f 0%,#242424 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #2f2f2f 0%,#242424 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #2f2f2f 0%,#242424 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f2f', endColorstr='#242424',GradientType=0 ); /* IE6-9 */
-}
-/*Footer*/
-footer {
-	width:100%;
-	float:left;
-	clear:both;
-	box-shadow:0px 2px 2px #000;
-		-moz-box-shadow:0px 2px 2px #000;
-		-webkit-box-shadow:0px 2px 2px #000;
-	border-radius:5px;
-		-moz-border-radius:5px;
-		-webkit-border-radius:5px;
-	background: #2f2f2f; /* Old browsers */
-background: -moz-linear-gradient(top,  #2f2f2f 0%, #242424 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2f2f2f), color-stop(100%,#242424)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #2f2f2f 0%,#242424 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #2f2f2f 0%,#242424 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #2f2f2f 0%,#242424 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #2f2f2f 0%,#242424 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f2f', endColorstr='#242424',GradientType=0 ); /* IE6-9 */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background-color: #111;
+  text-align: center;
+
+  .fa-twitter {
+    color: #4099FF;
 }
 
-footer section {
-	width:440px;
-	float:left;
-	padding:20px;
+.fa-facebook {
+    color: #3B5998;
 }
 
-footer #acerca-de {
-	font-family:Arial, Helvetica, Sans-serif;
-	font-size:12px;
-	color:#8c8c8c;
-	text-align:justify;
-	line-height:20px;
+.fa-youtube-play {
+    color: #e52d27;
 }
 
-footer #acerca-de h3 {
-	font-family:sourcesans-light;
-	font-size:20px;
-	color:#fff;
-	margin-bottom:5px;
+.fa-rss {
+    color: #FF6600;
 }
 
-footer #redes-s > div {
-	width:220px;
-	height:60px;
-	float:left;
-	background:#ff8000;
-	opacity:0.5;
+.fa-vine {
+    color: #00a478;
 }
 
-footer #redes-s > div a {
-	width:220px;
-	height:60px;
-	display:inline-block;
+.fa-flickr {
+    color: #ff0084;
 }
 
-footer #redes-s .email {
-	background:url(../imagenes/correo.png);
-	margin-bottom:15px;
+.fa-twitch {
+    color: #6441A5;
 }
 
-footer #redes-s .twitter {
-	background:url(../imagenes/twitter.png);
-	margin-bottom:15px;
+.fa-linkedin {
+    color: #007bb6;
 }
 
-footer #redes-s .facebook {
-	background:url(../imagenes/facebook.png);
+.fa {
+    opacity: 0.7;
+    transition: 1s;
+    -webkit-transition: 1s;
 }
 
-footer #redes-s .youtube {
-	background:url(../imagenes/youtube.png);
-}
-
-footer #redes-s > div:hover {
-	opacity:1;
-}
-
-#copyright {
-	float:left;
-	width:960px;
-	margin:10px 0px;
-}
-
-#copyright p {
-	text-align:center;
-	font-size:12px;
-	color:#fff;
-	font-family:Arial, Helvetica, Sans-serif;
-}
+.fa:hover{
+    opacity: 1;
+    transition: 1s;
+    -webkit-transition: 1s;    </style>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />');
+            else $('head > link').filter(':first').replaceWith(defaultCSS);
+        }
+        $( document ).ready(function() {
+          var iframe_height = parseInt($('html').height());
+          window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
+        });
 /*# sourceMappingURL=bootstrap.css.map */
